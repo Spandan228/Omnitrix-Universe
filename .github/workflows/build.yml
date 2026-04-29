@@ -1,0 +1,32 @@
+name: C++ CI Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install SFML dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libsfml-dev
+
+    - name: Build project with Make
+      run: make
+
+    - name: Verify successful build
+      run: |
+        if [ -f "bin/OmnitrixUniverse" ]; then
+          echo "Build successful! Executable found in bin/"
+        else
+          echo "Build failed: bin/OmnitrixUniverse not found"
+          exit 1
+        fi

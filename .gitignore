@@ -1,0 +1,49 @@
+# Built application files
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# Object files and executables
+*.o
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+*.app
+
+# Directories
+build/
+bin/
+release/
+dist/
+mingw-w64*
+
+# Log files
+*.log
+logs/
+build_log*.txt
+game_log.txt
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# IDE files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
